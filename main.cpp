@@ -1,6 +1,13 @@
 #include <iostream>
 #include <cmath>
 #include "includes/RootFinding.hpp"
+// TODO: 
+/**
+ * CREATE A CUDA VERSION OF THIS FILE
+ * 
+ */
+
+
 
 double f(double x) {
     return x * x - 2;
