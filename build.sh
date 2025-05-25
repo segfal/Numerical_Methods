@@ -5,7 +5,25 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     exit 1
 fi
 
-
+# if nvcc is not installed, then install it
+if ! command -v nvcc &> /dev/null; then
+    echo "Error: nvcc is not installed"
+    sudo apt-get update
+    sudo apt-get install nvidia-cuda-toolkit
+    sudo apt-get install nvidia-cuda-toolkit-dev
+    sudo apt-get install nvidia-cuda-toolkit-doc
+    sudo apt-get install nvidia-cuda-toolkit-samples
+    sudo apt-get install nvidia-cuda-toolkit-tools
+    sudo apt-get install nvidia-cuda-toolkit-utils
+    sudo apt-get install nvidia-cuda-toolkit-libs
+    sudo apt-get install nvidia-cuda-toolkit-libs-dev
+    sudo apt-get install nvidia-cuda-toolkit-libs-doc
+    sudo apt-get install nvidia-cuda-toolkit-libs-dev
+    sudo apt-get install nvidia-cuda-toolkit-libs-doc
+    sudo apt-get install nvidia-cuda-toolkit-libs-dev
+    sudo apt-get install nvidia-cuda-toolkit-libs-doc
+    sudo apt-get install nvidia-cuda-toolkit-libs-dev
+fi
 
 # check if nvcc is installed
 git pull
