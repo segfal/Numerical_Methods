@@ -53,12 +53,6 @@ struct SteffensenMethod {
     }
 };
 
-
-
-
-
-
-
 class RootFinding {
     private:
         double tolerance;
@@ -69,7 +63,6 @@ class RootFinding {
         RootFinding(double tolerance, int max_iterations, RootFindingMethod method);
         double find_root(std::function<double(double)> f, double a, double b, std::function<double(double)> f_prime, double x0, double x1);
 };
-
 
 RootFinding::RootFinding(double tolerance, int max_iterations, RootFindingMethod method) : tolerance(tolerance), max_iterations(max_iterations), method(method) {}
 
@@ -89,6 +82,5 @@ double RootFinding::find_root(std::function<double(double)> f, double a, double 
             throw std::invalid_argument("Invalid method");
     }
 }
-
 
 #endif
